@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assingment-5</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+
+    <!-- Hero section -->
+    <section class="bg-amber-100  container mx-auto">
+        <div class=" flex gap-10 justify-center">
+            <div class="text-center">
+                <div class="pt-36  pb-5 ">---Sale Fever---</div>
+                <div class="px-10 ">
+                    <p class=" px-5 font-bold text-3xl  ">Purchase TK 200 or<br>above & get <strong class="text-[#E527B2]">20% off</strong></p>
+                    <div class="flex pt-8 gap-5 px-10 pb-28">
+                        <p class=" text-lg font-bold ">Use Promo Code</p>
+                        <button class="btn bg-[#E527B2] btn-sm  text-white">Sell 200</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="pt-20 pb-28">
+                <img src="./image/Summer 1.png" class="h-80"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Card section -->
+    <section class="container mx-auto">
+        <div class="flex  mx-20 gap-10 ">
+            <div class="ms-20">
+                <div class="pt-10 pb-5 ms-5 text-lg font-bold">Kitchenware</div>
+                <div class="flex  gap-10 ">
+                    <div  onclick="handleClickBtn(this)" id="card" class="card w-60 h-80 bg-base-100 shadow-xl">
+                        <figure class="ms-2 me-2  bg-gray-100 border rounded-lg pt-5 px-10 pb-5 my-5">
+                            <img src="./image/prod1.png" alt="product" class="rounded-xl  h-16 my-5" />
+                        </figure>
+                        
+                        <div class="card-body items-center text-center">
+                            
+                            <div class="flex rating  text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            
+                            <h2 id="text" class="card-title text-sm">K. Accessories</h2>
+                            <p id="price" class=" text-sm">39.00 Tk</p>
+                        </div>
+                    </div>
+    
+                    <div onclick="handleClickBtn(this)" id="card" class="card w-60 h-80 bg-base-100 shadow-xl">
+                        <figure class="ms-2 me-2  bg-gray-100 border rounded-lg pt-5 px-10 pb-5 my-5">
+                            <img src="./image/prod2.png" alt="product" class="rounded-xl  h-16 my-5" />
+                        </figure>
+                        
+                        <div class="card-body items-center text-center">
+                            
+                            <div class="flex rating  text-amber-400">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            
+                            <h2 id="text" class="card-title text-sm">K. Accessories</h2>
+                            <p id="price" class="text-sm">25.00 Tk</p>
+                        </div>
+                    </div>
+    
+                    <div onclick="handleClickBtn(this)" id="card" class="card w-60 h-80 bg-base-100 shadow-xl">
+                        <figure class="ms-2 me-2  bg-gray-100 border rounded-lg pt-5 px-10 pb-5 my-5">
+                            <img src="./image/prod3.png" alt="product" class="rounded-xl  h-16 my-5" />
+                        </figure>
+                        
+                        <div class="card-body items-center text-center">
+                            
+                            <div class="flex rating  text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            
+                            <h2 id="text" class="card-title text-sm">Home Cooker</h2>
+                            <p id="price" class=" text-sm">49.00 Tk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="mx-20">
+                <div class="card w-80 h-28 mt-24  bg-[#FFF] shadow-xl  ">
+                    <div class="font-bold ms-5 mt-5">Have coupon?</div>
+                    <div class="flex">
+                        <input id="cupon-code" type="text" placeholder="Type here" class="input input-sm input-bordered w-full max-w-xs ms-5 mt-2" />
+                        <button id="cupon" onclick="applyCupon()" class="rounded-xl font-bold bg-[#E527B2] btn-sm  text-white me-2 mt-2 disabled:opacity-25"disabled>Apply</button>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <div class="card w-80 h-auto bg-[#FFF] shadow-xl  ">
+                        <div class="selected-Items mx-5 mt-2" id="selected-Items"></div>
+                        <div  class="font-bold ms-5 mt-20">Total Price: <span id="total">00</span></div>
+                        <div class="font-bold ms-5">Discount Price :<span id="discount">00</span></div>
+                        <div  class="font-bold ms-5">Total : <span id="final-total">00</span></div>
+                        <hr class="mx-5 mt-5">
+                        
+                        <button id="purchase" onclick="my_modal_5.showModal()" class="font-bold bg-[#E527B2] btn-sm  mx-8  me-8 text-white me-2 mt-2 mb-5 disabled:opacity-25" disabled >Make Purchase</button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                            <form method="dialog" class="modal-box text-center">
+                                <div class="text-center pl-48">
+                                    <img class=" w-24 h-18" src="./image/congo.png" />
+                                </div>
+                                
+                                <h3 class="font-bold text-lg">Congratulations</h3>
+                                <p class="">Your purchase the product</p>
+                                <div class="modal-action justify-center">
+                                    
+                                    <a href="./index.html" class="btn-md rounded-xl text-white bg-[#E527B2] pt-3">Go Home</a>
+
+                                </div>
+                            </form>
+                        </dialog>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto">
+        <div class="flex mx-20 gap-10">
+            <div class="ms-20">
+                <div class=" pb-5 ms-5 text-lg font-bold">SportsWear</div>
+                <div class="flex  gap-10 ">
+                    <div  onclick="handleClickBtn(this)" id="card" class="card w-60 h-80 bg-base-100 shadow-xl">
+                        <figure class="ms-2 me-2  bg-gray-100 border rounded-lg pt-5 px-10 pb-5 my-5">
+                            <img src="./image/prod4.png" alt="product" class="rounded-xl  h-16 my-5" />
+                        </figure>
+                        
+                        <div class="card-body items-center text-center">
+                            
+                            <div class="flex rating  text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            
+                            <h2 id="text" class="card-title text-sm">Sports Back Cap</h2>
+                            <p id="price" class=" text-sm">49.00 Tk</p>
+                        </div>
+                    </div>
+    
+                    <div onclick="handleClickBtn(this)" id="card" class="card w-60 h-80 bg-base-100 shadow-xl">
+                        <figure class="ms-2 me-2  bg-gray-100 border rounded-lg pt-5 px-10 pb-5 my-5">
+                            <img src="./image/prod5.png" alt="product" class="rounded-xl  h-16 my-5" />
+                        </figure>
+                        
+                        <div class="card-body items-center text-center">
+                            
+                            <div class="flex rating  text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            
+                            <h2 id="text" class="card-title text-sm">Full jersey Set</h2>
+                            <p id="price" class="text-sm">69.00 Tk</p>
+                        </div>
+                    </div>
+    
+                    <div onclick="handleClickBtn(this)" id="card" class="card w-60 h-80 bg-base-100 shadow-xl">
+                        <figure class="ms-2 me-2  bg-gray-100 border rounded-lg pt-5 px-10 pb-5 my-5">
+                            <img src="./image/prod6.png" alt="product" class="rounded-xl  h-16 my-5" />
+                        </figure>
+                        
+                        <div class="card-body items-center text-center">
+                            
+                            <div class="flex rating  text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            
+                            <h2 id="text" class="card-title text-sm">Sports Cates</h2>
+                            <p id="price" class=" text-sm">159.00 Tk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto">
+        <div class="flex  mx-20 gap-10 ">
+            <div class="ms-20">
+                <div class="pt-10 pb-5 ms-5 text-lg font-bold">Furniture</div>
+                <div class="flex  gap-10 ">
+                    <div  onclick="handleClickBtn(this)" id="card" class="card w-60 h-80 bg-base-100 shadow-xl">
+                        <figure class="ms-2 me-2  bg-gray-100 border rounded-lg pt-5 px-10 pb-5 my-5">
+                            <img src="./image/prod7.png" alt="product" class="rounded-xl  h-16 my-5" />
+                        </figure>
+                        
+                        <div class="card-body items-center text-center">
+                            
+                            <div class="flex rating  text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            
+                            <h2 id="text" class="card-title text-sm">Single Relax Chair</h2>
+                            <p id="price" class=" text-sm">185.00 Tk</p>
+                        </div>
+                    </div>
+    
+                    <div onclick="handleClickBtn(this)" id="card" class="card w-60 h-80 bg-base-100 shadow-xl">
+                        <figure class="ms-2 me-2  bg-gray-100 border rounded-lg pt-5 px-10 pb-5 my-5">
+                            <img src="./image/prod8.png" alt="product" class="rounded-xl  h-16 my-5" />
+                        </figure>
+                        
+                        <div class="card-body items-center text-center">
+                            
+                            <div class="flex rating  text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            
+                            <h2 id="text" class="card-title text-sm">Children play</h2>
+                            <p id="price" class="text-sm">299.00 Tk</p>
+                        </div>
+                    </div>
+    
+                    <div onclick="handleClickBtn(this)" id="card" class="card w-60 h-80 bg-base-100 shadow-xl">
+                        <figure class="ms-2 me-2  bg-gray-100 border rounded-lg pt-5 px-10 pb-5 my-5">
+                            <img src="./image/prod9.png" alt="product" class="rounded-xl  h-16 my-5" />
+                        </figure>
+                        
+                        <div class="card-body items-center text-center">
+                            
+                            <div class="flex rating  text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            
+                            <h2 id="text" class="card-title text-sm">Flexible Sofa</h2>
+                            <p id="price" class=" text-sm">339.00 Tk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
